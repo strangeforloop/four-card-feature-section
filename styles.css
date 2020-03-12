@@ -1,0 +1,152 @@
+:root {
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+
+  --neutral-dark-blue: hsl(234, 12%, 34%);
+  --neutral-grayish-blue: hsl(229, 6%, 66%);
+  --neutral-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  /* color: var(--neutral-light-gray); */
+  color: var(--neutral-dark-blue);
+  display: flex;
+  flex-direction: column;
+  background: var(--neutral-light-gray);
+}
+
+.intro {
+  margin: 0 2.2rem;
+  text-align: center;
+  max-width: 33rem;
+  margin: auto;
+}
+
+.regularTagLine {
+  margin-top: 94px;
+  font-weight: 200;
+  font-size: 1.69rem;
+}
+
+.emphasizedTagLine {
+  font-weight: 600;
+  font-size: 1.69rem;
+}
+
+.aboutText {
+  font-weight: 400;
+  color: var(--neutral-grayish-blue);
+  text-align: center;
+  margin: 1.2rem 2.05rem 0;
+  font-size: 0.95rem;
+}
+
+.main-content {
+  margin-top: 82px;
+}
+
+.card-column-single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card */
+.cards-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  width: 304px;
+  height: 222px;
+  /* margin: auto; */
+  border-radius: 4px;
+  box-shadow: 2px 5px 10px#dfe5f1;
+  border-top: 3px solid black;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.card-content {
+  margin: 1.3rem;
+  height: calc(100% - 1.5rem);
+  position: relative;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  /* margin-top: 1.3rem; */
+}
+
+.card-info {
+  color: var(--neutral-grayish-blue);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.card1 {
+  border-top: 3px solid var(--primary-cyan);
+}
+
+.card2 {
+  border-top: 3px solid var(--primary-red);  
+}
+
+.card3 {
+  border-top: 3px solid var(--primary-orange); 
+}
+
+.card4 {
+  border-top: 3px solid var(--primary-blue);
+}
+
+@media (min-width: 1440px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-holder {
+    /* display: flex;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.6rem;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+  .card2 {
+    margin-bottom: 1.6rem;
+  }
+
+  .aboutText {
+    margin: 1.2rem .7rem 0;
+  }
+  
+}
